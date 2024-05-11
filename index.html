@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="https://engix.testworks.top/front/template_assets/css/font-awesome-pro.css">
   <link rel="stylesheet" href="https://engix.testworks.top/front/template_assets/css/spacing.css">
   <link rel="stylesheet" href="Template Main/assets/css/LineIcons.3.0.css" />
+  <link rel="stylesheet" href="Template Main/assets/css/glightbox.min.css" />
   <link href='https://fonts.googleapis.com/css?family=Tajawal' rel='stylesheet'>
   <style>
     body,
@@ -523,6 +524,25 @@
   <script src="https://engix.testworks.top/front/template_assets/js/jquery-appear.js"></script>
   <script src="https://engix.testworks.top/front/template_assets/js/jquery-knob.js"></script>
   <script src="https://engix.testworks.top/front/template_assets/js/ajax-form.js"></script>
+  <script src="Template Main/assets/js/glightbox.min.js"></script>
+  <script type="text/javascript">
+    const current = document.getElementById("current");
+    const opacity = 0.6;
+    const imgs = document.querySelectorAll(".img");
+    imgs.forEach(img => {
+      img.addEventListener("click", (e) => {
+        //reset opacity
+        imgs.forEach(img => {
+          img.style.opacity = 1;
+        });
+        current.src = e.target.src;
+        //adding class
+        //current.classList.add("fade-in");
+        //opacity
+        e.target.style.opacity = opacity;
+      });
+    });
+  </script>
   <script src="https://engix.testworks.top/front/template_assets/js/main.js"></script>
 </body>
 
